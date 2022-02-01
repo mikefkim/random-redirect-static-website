@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript">
+const urls = [
+  "https://google.com",
+  "https://twitter.com",
+  "https://facebook.com"
+];
+const weights = [0.6, 0.3, 0.1];
+
+var random = Math.random();
+var cutoff = weights[0];
+let i = 0;
+while (true) {
+  if (random < cutoff) { break; }
+  i++;
+  cutoff += weights[i];
+}
+window.location = urls[i];
+</script>
+</body>
+</html>
